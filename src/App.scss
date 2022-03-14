@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+  --paleBlue: hsl(223, 100%, 88%);
+  --lightRed: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --veryDarkBlue: hsl(209, 33%, 12%);
+  --font: 20px;
+  --rounded: 40px;
+  --fontFamily: "Libre Franklin", sans-serif;
+  --thin: 300;
+  --normal: 600;
+  --bold: 700;
+}
+
+* {
+  font-family: var(--fontFamily);
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  margin: 80px 30px 40px 30px;
+  font-size: var(--font);
+  color: var(--veryDarkBlue);
+  font-weight: var(--normal);
+  text-align: center;
+
+  .logo {
+    margin-bottom: 80px;
+  }
+
+  .heading {
+    margin-bottom: 65px;
+
+    h1 {
+      font-size: 25px;
+      color: var(--gray);
+      font-weight: var(--thin);
+      strong {
+        color: var(--veryDarkBlue);
+        font-weight: var(--bold);
+      }
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--gray);
+      font-weight: var(--thin);
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .input-wrapper {
+      width: 100%;
+      height: 50px;
+      border-radius: var(--rounded);
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--blue);
+      margin-bottom: 20px;
+
+      input {
+        width: 70%;
+        height: 100%;
+        border: none;
+        border-radius: var(--rounded);
+        outline: none;
+        padding: 0 20px;
+        background: transparent;
+
+        &::placeholder {
+          color: var(--gray);
+          font-size: 18px;
+        }
+      }
+
+      &.error {
+        border: 2px solid var(--lightRed);
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      border: 1px solid var(--blue);
+      outline: none;
+      border-radius: var(--rounded);
+      background: var(--blue);
+      cursor: pointer;
+      color: white;
+      margin-bottom: 60px;
+      transition: ease 0.5ms;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .error {
+    color: var(--lightRed);
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .bg-image {
+    margin-bottom: 55px;
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    .facebook {
+      border-radius: 50%;
+      padding: 9px;
+      margin-right: 10px;
+      transition: ease 0.5ms;
+      &:hover {
+        background: var(--blue);
+        color: white;
+      }
+    }
+
+    .twit {
+      border-radius: 50%;
+      padding: 9px;
+      margin-right: 10px;
+      transition: ease 0.5ms;
+      &:hover {
+        background: var(--blue);
+        color: white;
+      }
+    }
+
+    .insta {
+      border-radius: 50%;
+      padding: 9px;
+      margin-right: 10px;
+      transition: ease 0.5ms;
+      &:hover {
+        background: var(--blue);
+        color: white;
+      }
+    }
+  }
+
+  footer {
+    font-size: 14px;
+    color: var(--gray);
+    font-weight: var(--thin);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .App {
+    .logo {
+      margin-bottom: 60px;
+    }
+
+    .heading {
+      margin-bottom: 45px;
+
+      h1 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: var(--font);
+      }
+    }
+    .form {
+      flex-direction: row;
+      justify-content: center;
+
+      .input-wrapper {
+        width: 420px;
+        height: 56px;
+        margin-right: 15px;
+
+        input {
+          font-size: 16px;
+
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
+      }
+      button {
+        width: 200px;
+        height: 56px;
+        font-size: 16px;
+        font-weight: var(--bold);
+        margin-bottom: 93px;
+      }
+    }
+
+    .bg-image {
+      margin-bottom: 70px;
+      img {
+        width: 640px;
+        height: 390px;
+      }
+    }
+
+    .error {
+      color: var(--lightRed);
+    }
+  }
+}
